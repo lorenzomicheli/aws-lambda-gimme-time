@@ -1,11 +1,12 @@
 'use strict';
 
-module.exports.time = async (event, context) => {
-    var currentTime = new time.Date(); 
+const time = require('./time');
+
+module.exports.gimmetime = async () => {
+    const currentTime = time.getTime();
     currentTime.setTimezone("Europe/Rome");
     return {
         statusCode: '200',
-        body: 'The time in Romes is: ' + currentTime.toString(),
+        body: 'The time in Rome is: ' + currentTime.toString(),
     };
-  };
 };

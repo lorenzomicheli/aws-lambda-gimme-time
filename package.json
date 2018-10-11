@@ -4,7 +4,7 @@
   "description": "Gimme time",
   "main": "handler.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/mocha test/ --reporter spec"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/zorzorz/aws-lambda-gimme-time#readme",
   "devDependencies": {
+    "assert": "^1.4.1",
+    "mocha": "^5.2.0",
+    "nyc": "^13.0.1",
+    "rewire": "^4.0.1",
     "serverless": "^1.32.0"
   },
   "dependencies": {
