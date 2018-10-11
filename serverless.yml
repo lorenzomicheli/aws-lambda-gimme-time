@@ -1,0 +1,14 @@
+
+service: time-in
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+
+functions:
+  hello:
+    handler: handler.time
+    events:
+      - http:
+          path: /time
+          method: get
