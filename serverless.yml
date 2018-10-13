@@ -1,5 +1,5 @@
 
-service: time-in
+service: gimme-time
 
 provider:
   name: aws
