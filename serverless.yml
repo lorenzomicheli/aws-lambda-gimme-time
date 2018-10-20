@@ -11,8 +11,8 @@ custom:
   currentStage: ${opt:stage, self:custom.defaultStage}
 
 functions:
-  hello:
-    handler: handler.time
+  gimmetime:
+    handler: handler.gimmetime
     role: arn:aws:iam::690402811369:role/GimmiTime-Lambda-Role
     events:
       - http:
