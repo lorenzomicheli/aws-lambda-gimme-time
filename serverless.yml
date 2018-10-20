@@ -13,6 +13,7 @@ custom:
 functions:
   hello:
     handler: handler.time
+    role: arn:aws:iam::690402811369:role/GimmiTime-Lambda-Role
     events:
       - http:
           path: /time
