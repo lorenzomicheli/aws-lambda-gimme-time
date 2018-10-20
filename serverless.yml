@@ -1,9 +1,14 @@
 
-service: gimme-time
+service: GimmiTime
 
 provider:
   name: aws
   runtime: nodejs8.10
+  cfnRole: arn:aws:iam::690402811369:role/GimmiTime-Cloudformation-role
+
+custom:
+  defaultStage: dev
+  currentStage: ${opt:stage, self:custom.defaultStage}
 
 functions:
   hello:
