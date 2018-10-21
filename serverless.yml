@@ -1,14 +1,15 @@
 
-service: GimmiTime
+service: gimme-time
 
 provider:
   name: aws
   runtime: nodejs8.10
-  cfnRole: arn:aws:iam::690402811369:role/GimmiTime-Cloudformation-role
+  environment:
+    STAGE: ${opt:stage}
 
 custom:
-  defaultStage: dev
-  currentStage: ${opt:stage, self:custom.defaultStage}
+  output:
+    file: .build/stack.json # where stack output should be stored by the serverless-stack-output plugin
 
 functions:
   gimmetime:
@@ -18,3 +19,7 @@ functions:
       - http:
           path: /time
           method: get
+
+plugins:
+  - serverless-offline
+  - serverless-stack-output # store stack output in a file

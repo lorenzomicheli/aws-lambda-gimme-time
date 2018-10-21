@@ -1,9 +1,11 @@
 version: 0.2
 
 phases:
+  install:
+    commands:
+      - npm install
+
   build:
     commands:
-      - chmod +x build.sh
-      - ./build.sh test
-      - ./build.sh deploy dev eu-central-1
-#      - ./build.sh acceptance-tes§t
+      - npm run-script lint
+      - npm run test
