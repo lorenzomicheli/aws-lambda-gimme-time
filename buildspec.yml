@@ -19,10 +19,10 @@ phases:
       - mkdir artifacts
     # create staging deployment package
       - mkdir artifacts/stg
-      - serverless package --package artifacts/stg --stage stg -v
+      - serverless package --package artifacts/stg --stage stg -v -r eu-central-1
     # create prod deployment package
       - mkdir artifacts/prod
-      - serverless package --package artifacts/prod --stage prod -v
+      - serverless package --package artifacts/prod --stage prod -v -r eu-central-1
 
 artifacts:
   files:
