@@ -24,9 +24,9 @@ phases:
       - mkdir artifacts/prod
       - serverless package --package artifacts/prod --stage prod -v
 
-  artifacts:
-    files:
-    # export artifacts needed for staging and prod deployments to an S3 bucket
-    - artifacts/**/*
-    - serverless.yml
-    - deploy.sh
+artifacts:
+  files:
+  # export artifacts needed for staging and prod deployments to an S3 bucket
+  - artifacts/**/*
+  - serverless.yml
+  - deploy.sh
