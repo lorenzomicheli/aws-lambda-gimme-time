@@ -1,10 +1,8 @@
-const time = require('./time');
+const moment = require('moment-timezone');
 
 module.exports.gimmetime = async () => {
-  const currentTime = time.getTime();
-  currentTime.setTimezone('Europe/Rome');
   return {
     statusCode: '200',
-    body: `The time in Rome is: ${currentTime.toString()}`
+    body: `The time in Rome is: ${moment().tz('Europe/Rome').format()}`
   };
 };

@@ -4,6 +4,17 @@
     "no-console": 0,
     "comma-dangle": ["error", "never"],
     "arrow-body-style": ["error", "always"],
-    "object-shorthand": ["error", "never"]
+    "object-shorthand": ["error", "never"],
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error"
+  },
+  "plugins": [
+    "jest"
+  ],
+  "env": {
+    "jest/globals": true
   }
 }
