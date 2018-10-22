@@ -7,4 +7,4 @@ npm install serverless-offline serverless-stack-output # we have to install the 
 
 echo "Deploying app to $env"
 echo "====================="
-serverless deploy --stage $env --package $CODEBUILD_SRC_DIR/artifacts/$env -v
+serverless deploy --stage $env --package $CODEBUILD_SRC_DIR/artifacts/$env -v -r eu-central-1
